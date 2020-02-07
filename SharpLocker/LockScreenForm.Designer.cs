@@ -120,8 +120,8 @@
             this.language.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.language.AutoSize = true;
             this.language.BackColor = System.Drawing.Color.Transparent;
-            this.language.BackgroundImage = global::SharpLocker.Properties.Resources.language;
-            this.language.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.language.Font = new System.Drawing.Font("Microsoft YaHei Light", 9F);
+            this.language.ForeColor = System.Drawing.Color.White;
             this.language.FlatAppearance.BorderColor = System.Drawing.Color.SkyBlue;
             this.language.FlatAppearance.BorderSize = 0;
             this.language.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;

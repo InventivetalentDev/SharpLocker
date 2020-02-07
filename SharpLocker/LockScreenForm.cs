@@ -1,9 +1,10 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Diagnostics;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading;
@@ -36,6 +37,8 @@ namespace SharpLocker
             UserNameLabel.Text = userName;
             UserNameLabel.BackColor = System.Drawing.Color.Transparent;
 
+            language.Text = CultureInfo.InstalledUICulture.ThreeLetterWindowsLanguageName;
+            
             int percentHeight = (Convert.ToInt32(Screen.PrimaryScreen.Bounds.Height) / 100);
             int middleWidth = (Convert.ToInt32(Screen.PrimaryScreen.Bounds.Width) / 2);
             int tbsize = 28;
