@@ -19,7 +19,6 @@ namespace SharpLocker
 {
     public partial class LockScreenForm : Form
     {
-        public LockScreenForm()
         [DllImport("shell32.dll", EntryPoint = "#261",
                CharSet = CharSet.Unicode, PreserveSig = false)]
         public static extern void GetUserTilePath(
@@ -39,7 +38,7 @@ namespace SharpLocker
             return Image.FromFile(GetUserTilePath(username));
         }
 
-        public Form1()
+        public LockScreenForm()
         {
 
             InitializeComponent();
@@ -95,10 +94,10 @@ namespace SharpLocker
 
             //https://stackoverflow.com/questions/7731855/rounded-edges-in-picturebox-c-sharp
             System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
-            gp.AddEllipse(0, 0, pictureBox1.Width - 3, pictureBox1.Height - 3);
+            gp.AddEllipse(0, 0, ProfileIcon.Width - 3, ProfileIcon.Height - 3);
             Region rg = new Region(gp);
-            pictureBox1.Region = rg;
-            pictureBox1.Image = GetUserTile(userNameText.Split('\\')[1]);
+            ProfileIcon.Region = rg;
+            ProfileIcon.Image = GetUserTile(userName);
 
             foreach (var screen in Screen.AllScreens)
             {
